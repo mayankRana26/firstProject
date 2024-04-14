@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Fly</title>
+    <style>
+        body {
+         
+            font-family: Futura, sans-serif;
+        }
+
+        header {
+    width: 98vw;
+    height: 45px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header div {
+    width: 30%;
+    padding-left: 0%;
+}
+
+#menu {
+    visibility: hidden;
+}
+
+#blueFly_logo_div {
+    width: 35%;
+    margin-left: 0px;
+    text-align: center;
+}
+
+#blueFly_logo {
+    width: 45%;
+}
+
+#menu_logo {
+    width: 20%;
+}
+
+.logo {
+    margin-top: 5px;
+    width: 30%;
+}
+
+.logo-div {
+    flex: 1 0 20%;
+    text-align: center;
+    font-size: 10px;
+}
+
+#for-logo-div {
+    display: flex;
+}
+
+#for-logo-div div {
+    width: 20%;
+}
+
+nav {
+    visibility: visible;
+    font-weight: 400;
+    font-family: Futura, sans-serif;
+    letter-spacing: .025em;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+.navData {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navData:last-child {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    z-index: 1;
+    padding: 10px;
+    left: 0;
+}
+
+.navData:last-child .dropdown-content {
+    left: 42%;
+    right: auto;
+}
+
+.navData:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.navData:hover {
+    text-decoration: underline;
+}
+
+#welcome-div {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 40px;
+    margin-top: 20px;
+    padding: 4px;
+}
+
+#banner-div {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+
+.recommended {
+    height: 50px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 65px;
+}
+
+.recommended p {
+    margin-top: 8px;
+    letter-spacing: 0.1em;
+}
+
+#for-footware,
+#for-Itmes {
+    margin: auto;
+    width: 95%;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+}
+
+#for-footware div {
+    z-index: 0;
+}
+
+.heart-logo-div {
+    height: 20px;
+}
+
+.heart-logo {
+    width: 10%;
+}
+
+.footware-logo-div {
+    height: 190px;
+    text-align: center;
+}
+
+.shoes-logo {
+    width: 80%;
+}
+
+.description {
+    height: 20px;
+    width: 170px;
+    margin-top: -65px;
+    margin-left: 32px;
+    font-size: 12px;
+    background-color: red;
+    transform: translate(15%, -40%);
+    padding-top: 5px;
+}
+
+.for-title {
+    height: 70px;
+    text-align: center;
+    font-size: 20PX;
+    margin-top: 25px;
+    letter-spacing: 0.2em;
+}
+
+.title {
+    letter-spacing: 0.1em;
+}
+
+.price {
+    margin-top: 10px;
+    margin-left: 20%;
+    font-size: 18px;
+}
+
+#middle-images-div,
+#last-itmes-div {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    margin-top: 150px;
+}
+
+.middle-images {
+    width: 100%;
+}
+
+#shop-by {
+    width: 100%;
+    margin-top: 45px;
+    height: 100px;
+    border-top: 1px solid rgba(128, 128, 128, 0.309);
+}
+
+#shop-by p {
+    margin-top: 30px;
+}
+
+#colLections {
+    margin: auto;
+    margin-top: -50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+
+#colLections div {
+    text-align: center;
+}
+
+#colLections div p {
+    margin-top: -10px;
+}
+
+#big-Image {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#big-Image img {
+    width: 100%;
+}
+
+#First-button-div {
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    margin-top: -60px;
+    text-align: center;
+}
+
+#First-button-div button {
+    height: 40px;
+    width: 140px;
+    font-size: 19px;
+    letter-spacing: 0.1em;
+    color: rgba(121, 119, 119, 0.884);
+    background-color: white;
+    border: 1px solid rgba(121, 119, 119, 0.884);
+}
+
+.last-images {
+    width: 100%;
+}
+
+#middle-image {
+    width: 80%;
+}
+
+#last-one {
+    width: 88%;
+}
+
+#last-itmes-div div button {
+    height: 40px;
+    width: auto;
+    font-size: 19px;
+    letter-spacing: 0.1em;
+    color: rgba(121, 119, 119, 0.884);
+    background-color: white;
+    border: 1px solid rgba(121, 119, 119, 0.884);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 280px;
+    background-color: #e6e6e6;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+#main-footer {
+    visibility: visible;
+    display: flex;
+    width: 100%;
+    height: 280px;
+}
+
+#left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-top: 10px;
+    width: 40%;
+    margin-left: 2%;
+}
+
+.about-us {
+    font-size: 25px;
+    letter-spacing: 0.1em;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    margin-top: 10px;
+}
+
+#Subscribe {
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+
+#Subscribe p {
+    margin-left: 42%;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#place {
+    height: 50px;
+    width: 460px;
+    font-size: 20px;
+}
+
+.instagram {
+    width: 60%;
+}
+
+#social-media-div {
+    margin-top: -10px;
+    display: flex;
+    height: 60px;
+}
+
+#social-media-div div {
+    width: 20%;
+}
+
+#bf-logo {
+    background-color: #e6e6e6;
+    width: 100%;
+    text-align: center;
+    height: 280px;
+}
+
+#bf-logo img {
+    margin: 2%;
+    width: 20%;
+}
+
+@media all and (min-width:320px) and (max-width:480px) {
+    header {
+        margin-top: 20px;
+    }
+
+    #banner-div {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #blueFly_logo {
+        width: 90%;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .for-logo-div :nth-child(2),
+    .for-logo-div :nth-child(3) {
+        display: none;
+        visibility: hidden;
+    }
+
+    .for-logo-div {
+        flex: 1 0 40%;
+    }
+
+    #menu {
+        visibility: visible;
+    }
+
+    nav {
+        visibility: hidden;
+    }
+
+    #welcome-div {
+        margin-top: -100px;
+    }
+
+    .recommended {
+        font-size: 15px;
+    }
+
+    #for-footware,
+    #for-Itmes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .for-title {
+        margin-top: -70px;
+    }
+
+    .price {
+        margin-top: 60px;
+        margin-left: 20%;
+        font-size: 18px;
+    }
+
+    #middle-images-div,
+    #last-itmes-div {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        margin-top: 600px;
+    }
+
+    #colLections {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+
+    #main-footer {
+        visibility: hidden;
+    }
+
+    #bf-logo img {
+        margin-top: -70px;
+        width: 50%;
+    }
+
+    #bf-logo p {
+        margin-top: 30px;
+    }
+}
+
+@media all and (min-width:481px) and (max-width:767px) {
+    header {
+        margin-top: 20px;
+    }
+
+    #banner-div {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #blueFly_logo {
+        width: 90%;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .for-logo-div :nth-child(2),
+    .for-logo-div :nth-child(3) {
+        display: none;
+        visibility: hidden;
+    }
+
+    .for-logo-div {
+        flex: 1 0 40%;
+    }
+
+    #menu {
+        visibility: visible;
+    }
+
+    nav {
+        visibility: hidden;
+    }
+
+    #welcome-div {
+        margin-top: -100px;
+    }
+
+    .recommended {
+        font-size: 15px;
+    }
+
+    #for-footware,
+    #for-Itmes {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .for-title {
+        margin-top: -20px;
+    }
+
+    .price {
+        margin-top: 50px;
+        margin-left: 20%;
+        font-size: 18px;
+    }
+
+    #middle-images-div,
+    #last-itmes-div {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        margin-top: 420px;
+    }
+
+    #colLections {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    #main-footer {
+        visibility: hidden;
+    }
+
+    #bf-logo img {
+        margin-top: -70px;
+        width: 50%;
+    }
+
+    #bf-logo p {
+        margin-top: 30px;
+    }
+}
+
+@media all and (min-width:768px) and (max-width:1024px) {
+    header {
+        margin-top: 20px;
+    }
+
+    #banner-div {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #blueFly_logo {
+        width: 90%;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .for-logo-div :nth-child(2),
+    .for-logo-div :nth-child(3) {
+        display: none;
+        visibility: hidden;
+    }
+
+    .for-logo-div {
+        flex: 1 0 40%;
+    }
+
+    #menu {
+        visibility: visible;
+    }
+
+    nav {
+        visibility: hidden;
+    }
+
+    #welcome-div {
+        margin-top: -100px;
+    }
+
+    .recommended {
+        font-size: 15px;
+    }
+
+    #for-footware,
+    #for-Itmes {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .for-title {
+        margin-top: -50px;
+    }
+
+    .price {
+        margin-top: 80px;
+        margin-left: 20%;
+        font-size: 18px;
+    }
+
+    #middle-images-div,
+    #last-itmes-div {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        margin-top: 350px;
+    }
+
+    #colLections {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    #main-footer {
+        visibility: hidden;
+    }
+
+    #bf-logo img {
+        margin-top: -100px;
+        width: 50%;
+    }
+
+    #bf-logo p {
+        margin-top: 30px;
+    }
+}
+ 
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="menu" "><img
+                src="
+            https://static.vecteezy.com/system/resources/thumbnails/001/500/312/small/bullet-menu-icon-free-vector.jpg"
+            alt="menu_logo" id="menu_logo"></div>
+        <div id="blueFly_logo_div"><img src="https://www.bluefly.com/cdn/shop/files/BLUEFLY-LOGO-11-20.png?v=1613183141"
+                alt="blueFly_logo" id="blueFly_logo">
+        </div>
+        <div id="for-logo-div">
+            <div class="logo-div"><img src="https://static.thenounproject.com/png/1018657-200.png
+                " alt="search-logo" class="logo"></div>
+            <!-- <div class="logo-div"><p>SEARCH</p></div> -->
+            <div class="logo-div"><img src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg
+                " alt="profile-logo" class="logo"></div>
+            <div class="logo-div"><img src="https://static.thenounproject.com/png/734918-200.png
+                " alt="favourite-logo" class="logo"></div>
+            <div class="logo-div"><img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/010/926/876/small/shopping-bag-line-style-icon-diwali-vector.jpg"
+                    alt="cart-logo" class="logo"></div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="navData">CLOTHING
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">SHOES
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">HANDBAGS
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">DESIGNERS
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">SUNGLASSES
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">JEWELRY & WATCHES
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">ACCESSORIES
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">HOME
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">UNDER $50
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+            <li class="navData">CLEARANCE
+                <div class="dropdown-content">
+                    <a href="#">coats</a>
+                    <a href="#">activewear</a>
+                    <a href="#">Drasses</a>
+                    <a href="#">Jeans & Denim</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Skirt</a>
+
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="welcome-div">
+        <p style="margin-top: 12px;">WELCOME TO BLUEFLY</p>
+    </div>
+    <div id="banner-div">
+        <div><img
+                src="https://www.bluefly.com/cdn/shop/files/Luxe_for_Less_-Email_Hero_BANNER_1200X200_1_1600x.jpg?v=1712273773"
+                style="width: 100%;" alt=""></div>
+        <div><img
+                src="https://www.bluefly.com/cdn/shop/files/Luxe_for_Less_-Email_Hero_BANNER_1200X200_1_1600x.jpg?v=1712273773"
+                style="width: 100%" alt=""></div>
+    </div>
+    <div class="recommended">
+        <p>RECOMMENDED PRODUCTS</p>
+    </div>
+
+    <div id="for-footware">
+        <div>
+            <div class="heart-logo-div"><img src="https://static.thenounproject.com/png/734918-200.png" alt="heart-logo"
+                    class="heart-logo"></div>
+            <div class="footware-logo-div">
+                <img src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+                <p class="description">EXTRA 15% OFF IN CART</p>
+            </div>
+            <div class="for-title">
+                <p class="title">GUCCI WOMENS CRYSTAL-EMBELLISHED WEB SLIEDS</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+            <div class="heart-logo-div"><img src="https://static.thenounproject.com/png/734918-200.png" alt="heart-logo"
+                    class="heart-logo"></div>
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+                <p class="description">EXTRA 15% OFF IN CART</p>
+            </div>
+            <div class="for-title">
+                <p class="title">IT IS DUMMY TEXT FOR SHOES</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+            <div class="heart-logo-div"><img src="https://static.thenounproject.com/png/734918-200.png" alt="heart-logo"
+                    class="heart-logo"></div>
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+                <p class="description">EXTRA 15% OFF IN CART</p>
+            </div>
+            <div class="for-title">
+                <p class="title">GUCCI WOMENS CRYSTAL-EMBELLISHED WEB SLIEDS</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+            <div class="heart-logo-div"><img src="https://static.thenounproject.com/png/734918-200.png" alt="heart-logo"
+                    class="heart-logo"></div>
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+                <p class="description">EXTRA 15% OFF IN CART</p>
+            </div>
+            <div class="for-title">
+                <p class="title">IT IS DUMMY TEXT FOR SHOES</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+            <div class="heart-logo-div"><img src="https://static.thenounproject.com/png/734918-200.png" alt="heart-logo"
+                    class="heart-logo"></div>
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+                <p class="description">EXTRA 15% OFF IN CART</p>
+            </div>
+            <div class="for-title">
+                <p class="title">GUCCI WOMENS CRYSTAL-EMBELLISHED WEB SLIEDS</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+
+        </div>
+    </div>
+    <div id="middle-images-div">
+        <div><img src="https://www.bluefly.com/cdn/shop/files/shutterstock_1112754335-REV_540x.jpg?v=1656342184" alt=""
+                class="middle-images"></div>
+        <div><img src="https://www.bluefly.com/cdn/shop/files/shutterstock_1112754335-REV_540x.jpg?v=1656342184" alt=""
+                class="middle-images"></div>
+        <div><img src="https://www.bluefly.com/cdn/shop/files/shutterstock_1112754335-REV_540x.jpg?v=1656342184" alt=""
+                class="middle-images"></div>
+    </div>
+
+    <div id="shop-by" class="recommended""><p>SHOP BY CATEGORY</p></div>
+    <div id="colLections">
+
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+        <div><img
+                src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                alt="" class="shoes-logo" alt="shoes-logo">
+            <p>SHOES</p>
+        </div>
+    </div>
+    <br>
+    <div id="big-Image"><img
+            src="https://www.bluefly.com/cdn/shop/files/Luxe_for_Less_-Email_Hero_BANNER_1200X200_1_1600x.jpg?v=1712273773"
+            alt=""></div>
+    <br><br>
+    <hr><br>
+    <div class="recommended">
+        <p>NEW ARRIVALS</p>
+    </div>
+
+    <div id="First-button-div"><button>VIEW ALL</button></div>
+
+    <div id="for-Itmes">
+        <div>
+
+            <div class="footware-logo-div">
+                <img src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+
+            </div>
+            <div class="for-title">
+                <p class="title">GUCCI WOMENS CRYSTAL-EMBELLISHED WEB SLIEDS</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+
+            </div>
+            <div class="for-title">
+                <p class="title">IT IS DUMMY TEXT FOR SHOES</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+            </div>
+            <div class="for-title">
+                <p class="title">GUCCI WOMENS CRYSTAL-EMBELLISHED WEB SLIEDS</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+            </div>
+            <div class="for-title">
+                <p class="title">IT IS DUMMY TEXT FOR SHOES</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+        </div>
+        <div>
+
+            <div class="footware-logo-div"><img
+                    src="https://www.freekyshop.com/18318-home_default/date-court-20-vintage-white-and-green-man-low-shoes.jpg"
+                    class="shoes-logo" alt="shoes-logo">
+
+            </div>
+            <div class="for-title">
+                <p class="title">GUCCI WOMENS CRYSTAL-EMBELLISHED WEB SLIEDS</p>
+            </div>
+            <p class="price">$235.99 <span style="color: red;">SAVE 76%</span></p>
+
+        </div>
+    </div>
+    <div id="last-itmes-div">
+        <div>
+            <div><img src="https://www.bluefly.com/cdn/shop/files/denim_540x.jpg?v=1615204984" alt=""
+                    class="last-images"></div>
+            <h1>UP TO 85% OFF THE DENIM SHOP FOR HIM & HER</h1>
+            <P>From Hudson Jeans, Joe's Jeans, J Brand & More</P>
+
+            <div><button class="same-btn">SHOP DENIM</button></div>
+        </div>
+        <div>
+            <div><img src="https://www.bluefly.com/cdn/shop/files/shutterstock_1112754335-REV_540x.jpg?v=1656342184"
+                    alt="" id="middle-image" class="last-images"></div>
+            <h1>UP TO 90% OFF TRENDING JUMPSUITS & ROMPERS</h1>
+            <P>Must-Haves From Halston, BCBGMAXAZRIA, Iro & More</P>
+
+            <div><button class="same-btn">SHOP JUMPSUITS</button></div>
+        </div>
+        <div>
+            <div><img src="https://www.bluefly.com/cdn/shop/files/Tops_540x.jpg?v=1615206654" alt="" class="last-images"
+                    id="last-one"></div>
+            <h1>UP TO 90% OFF WOMEN'S MUST-HAVE ACCESSORIES</h1>
+            <P>Shop Wallets, Belts, Hats, Sunglasses & More</P>
+
+            <div><button class="same-btn">SHOP WOMAN'S ACCESSORIES</button></div>
+        </div>
+    </div>
+    <footer>
+<div id="main-footer">
+        <div id="left">
+            <div class="about-us">
+                ABOUT US
+            </div>
+            <div></div>
+            <div>
+                <p>Contact Us</p>
+            </div>
+            <div>
+                <p>Privacy Policy</p>
+            </div>
+            <div>
+                <p>Frequently Asked Questions</p>
+            </div>
+            <div>
+                <p>Terms & Conditions</p>
+            </div>
+            <div>
+                <p>Shipping & Returns</p>
+            </div>
+            <div>
+                <p>Do not sell my personal</p>
+            </div>
+            <div>
+                <p>Pre-Owned Guide</p>
+            </div>
+            <div>
+                <p>information</p>
+            </div>
+            <div>
+                <p>Sell on Bluefly</p>
+            </div>
+            <div>
+                <p>Shop Pay Installments</p>
+            </div>
+        </div>
+        <div id="right">
+            <div class="about-us">SIGN UP AND SAVE</div>
+            <div>Subscribe to get exclusive offers on designer brands </div>
+            <div><input type="text" id="place" placeholder="Enter your email"></div>
+            <div id="Subscribe">
+                <p>Subscribe</p>
+            </div>
+            <div id="social-media-div">
+                <div><img src="https://www.iconpacks.net/icons/2/free-instagram-logo-icon-3497-thumb.png" alt="" class="instagram"></div>
+                <div><img src="https://image.similarpng.com/very-thumbnail/2020/04/Black-icon-facebook-logo-PNG.png" alt="" class="instagram"></div>
+            </div>
+        </div>
+    </div>
+       
+    </footer>
+<div id="bf-logo">
+    <img src="https://www.bluefly.com/cdn/shop/files/Untitled_2_.png_5_x104@2x.png?v=1620852820" alt="">
+<p>© 2024 Bluefly BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>
+</div>
+
+
+</body>
+
+</html>
